@@ -374,31 +374,6 @@ gzip -d clash-linux-amd64-v1.18.0.gz
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的 Proxy Group 能实现哪些策略？</h5></div>
-    <div class="panel-body">
-        Proxy Group 可以定义多种策略，如按延迟选择、随机、轮询或手动选择节点。结合分流规则，可实现针对不同网站或应用的智能代理，提高网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow 支持哪些平台？</h5></div>
-    <div class="panel-body">
-        Mellow 是基于 Electron 的跨平台代理工具，支持 Windows、macOS 和 Linux。它通过 TUN 模式接管全局流量，并支持 Clash 规则和订阅格式，非常灵活。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的多策略组如何优化流量分配？</h5></div>
-    <div class="panel-body">
-        多策略组允许将节点按用途、延迟或地理位置分类，并结合规则文件自动分流流量。这样不同应用如游戏、视频和网页流量都能走最优节点，提高整体访问速度和稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 如何结合规则屏蔽广告？</h5></div>
-    <div class="panel-body">
-        Surfboard 可通过规则文件匹配广告域名或 URL，并将其重定向或阻断。结合策略组自动更新规则，可实现广告屏蔽，提高浏览体验和节省带宽。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan-Go 与 Trojan 有什么区别？</h5></div>
-    <div class="panel-body">
-        Trojan-Go 是 Trojan 的改进版，加入了多路复用、WebSocket 和 gRPC 支持。它兼容原版配置，同时在性能和连接灵活性上更优秀，适合多环境部署。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 是否还值得使用？</h5></div>
     <div class="panel-body">
         虽然 SSR 的开发早已停止，但由于它配置简单且部分节点仍然兼容，仍有一定使用场景。不过建议用户逐步迁移到更安全的新协议如 VLESS 或 Trojan，以获得更佳性能与隐蔽性。<hr />    </div>
@@ -409,19 +384,44 @@ gzip -d clash-linux-amd64-v1.18.0.gz
         策略组可将节点按延迟、用途或地理位置分类，通过规则自动选择最优节点。用户无需手动切换节点即可获得最佳速度和稳定性，提高浏览和观看流媒体的体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的 Proxy Group 能实现哪些策略？</h5></div>
+    <div class="panel-body">
+        Proxy Group 可以定义多种策略，如按延迟选择、随机、轮询或手动选择节点。结合分流规则，可实现针对不同网站或应用的智能代理，提高网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan 节点无法连接时应如何排查？</h5></div>
+    <div class="panel-body">
+        遇到 Trojan 无法连接时，需检查服务器证书是否有效、端口是否开放、密码配置是否匹配。还应确认防火墙未阻断相关端口，并尝试切换 TLS 版本或使用 IP 地址连接。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan-Go 与 Trojan 有什么区别？</h5></div>
+    <div class="panel-body">
+        Trojan-Go 是 Trojan 的改进版，加入了多路复用、WebSocket 和 gRPC 支持。它兼容原版配置，同时在性能和连接灵活性上更优秀，适合多环境部署。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 的多策略组如何优化流量分配？</h5></div>
+    <div class="panel-body">
+        多策略组允许将节点按用途、延迟或地理位置分类，并结合规则文件自动分流流量。这样不同应用如游戏、视频和网页流量都能走最优节点，提高整体访问速度和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Mellow 有哪些优势？</h5></div>
     <div class="panel-body">
         Mellow 是一个轻量化的跨平台代理客户端，采用透明代理和规则路由技术。它支持 V2Ray、Trojan 等协议，适用于 macOS、Windows 等操作系统。Mellow 运行稳定、资源占用低，非常适合后台长期使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 节点使用 AEAD 加密有何优势？</h5></div>
+    <div class="panel-heading"><h5>Surfboard 如何结合规则屏蔽广告？</h5></div>
     <div class="panel-body">
-        AEAD 加密能提供更强的安全性和抗重放能力，同时减少加密头泄露特征。相比普通加密，更适合高封锁环境，兼顾安全与性能，保证长期稳定使用。<hr />    </div>
+        Surfboard 可通过规则文件匹配广告域名或 URL，并将其重定向或阻断。结合策略组自动更新规则，可实现广告屏蔽，提高浏览体验和节省带宽。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 节点无法连接时应如何排查？</h5></div>
+    <div class="panel-heading"><h5>Mellow 支持哪些平台？</h5></div>
     <div class="panel-body">
-        遇到 Trojan 无法连接时，需检查服务器证书是否有效、端口是否开放、密码配置是否匹配。还应确认防火墙未阻断相关端口，并尝试切换 TLS 版本或使用 IP 地址连接。    </div>
+        Mellow 是基于 Electron 的跨平台代理工具，支持 Windows、macOS 和 Linux。它通过 TUN 模式接管全局流量，并支持 Clash 规则和订阅格式，非常灵活。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess 节点使用 AEAD 加密有何优势？</h5></div>
+    <div class="panel-body">
+        AEAD 加密能提供更强的安全性和抗重放能力，同时减少加密头泄露特征。相比普通加密，更适合高封锁环境，兼顾安全与性能，保证长期稳定使用。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -450,16 +450,16 @@ gzip -d clash-linux-amd64-v1.18.0.gz
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-1-18-shadowrocket-node.htm" title="V2ray Clash SSR - 1月18日20M/S|免费Trojan节点/SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点订阅节点分享">V2ray Clash SSR - 1月18日20M/S|免费Trojan节点/SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-3-free-clash.htm" title="V2ray Clash SSR - 1月3日18.5M/S|免费Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点订阅节点分享">V2ray Clash SSR - 1月3日18.5M/S|免费Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-24-free-ssr-node.htm" title="V2ray Clash SSR - 1月24日21.7M/S|免费Singbox节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Trojan节点订阅节点分享">V2ray Clash SSR - 1月24日21.7M/S|免费Singbox节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Trojan节点订阅节点分享</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-1-15-shadowrocket-node.htm" title="V2ray Clash SSR - 1月15日18.6M/S|免费V2ray节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点订阅节点分享">V2ray Clash SSR - 1月15日18.6M/S|免费V2ray节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-27-free-v2ray-subscribe.htm" title="V2ray Clash SSR - 1月27日18M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点/Trojan节点订阅节点分享">V2ray Clash SSR - 1月27日18M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点/Trojan节点订阅节点分享</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-1-14-clash-node-daily-updates.htm" title="V2ray Clash SSR - 1月14日18.9M/S|免费Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Singbox节点订阅节点分享">V2ray Clash SSR - 1月14日18.9M/S|免费Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Singbox节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-27-free-clash.htm" title="V2ray Clash SSR - 12月27日18.9M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点订阅节点分享">V2ray Clash SSR - 12月27日18.9M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-19-clash-v2ray-ss-ssr.htm" title="V2ray Clash SSR - 1月19日21.1M/S|免费V2ray节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点订阅节点分享">V2ray Clash SSR - 1月19日21.1M/S|免费V2ray节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-25-free-node-subscribe.htm" title="V2ray Clash SSR - 1月25日21.2M/S|免费Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点订阅节点分享">V2ray Clash SSR - 1月25日21.2M/S|免费Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-23-clash-v2ray-ss-ssr.htm" title="V2ray Clash SSR - 12月23日18.8M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点订阅节点分享">V2ray Clash SSR - 12月23日18.8M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-29-free-node-subscribe.htm" title="V2ray Clash SSR - 1月29日18.8M/S|免费SSR节点/Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/Clash节点订阅节点分享">V2ray Clash SSR - 1月29日18.8M/S|免费SSR节点/Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/Clash节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-8-clash-node.htm" title="V2ray Clash SSR - 1月8日19.5M/S|免费Singbox节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点订阅节点分享">V2ray Clash SSR - 1月8日19.5M/S|免费Singbox节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-18-shadowrocket-node.htm" title="V2ray Clash SSR - 1月18日20M/S|免费Trojan节点/SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点订阅节点分享">V2ray Clash SSR - 1月18日20M/S|免费Trojan节点/SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点订阅节点分享</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-1-6-free-ssr-node.htm" title="V2ray Clash SSR - 1月6日21.5M/S|免费Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点订阅节点分享">V2ray Clash SSR - 1月6日21.5M/S|免费Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-12-free-v2ray.htm" title="V2ray Clash SSR - 1月12日20.4M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点分享">V2ray Clash SSR - 1月12日20.4M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-8-free-subscribe-node.htm" title="V2ray Clash SSR - 2月8日22.8M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/Singbox节点/SSR节点订阅节点分享">V2ray Clash SSR - 2月8日22.8M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/Singbox节点/SSR节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-31-clash-v2ray-ss-ssr.htm" title="V2ray Clash SSR - 1月31日22.6M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点订阅节点分享">V2ray Clash SSR - 1月31日22.6M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点订阅节点分享</a></li>
                     </ul>
     </div>
 </div>
@@ -471,13 +471,10 @@ gzip -d clash-linux-amd64-v1.18.0.gz
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">2</span> <a href="/date/2026-02/" title="2026-02 归档">2026-02</a></h4>
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2026-02/" title="2026-02 归档">2026-02</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
             </li>
                     </ul>
     </div>
