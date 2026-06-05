@@ -139,37 +139,13 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/2026-5-28-free-v2ray.htm">V2ray Clash SSR - 5月28日21.6M/S|免费Clash节点/Trojan节点/SSR节点/Singbox节点/V2ray节点/Shadowrocket节点订阅节点分享</a></p>
+        <p>下一个：<a href="/free-nodes/2026-5-30-free-clash.htm">V2ray Clash SSR - 5月30日19.3M/S|免费Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点订阅节点分享</a></p>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的策略组支持哪些节点选择策略？</h5></div>
+    <div class="panel-heading"><h5>PassWall2 的节点测速结果如何影响分流？</h5></div>
     <div class="panel-body">
-        支持按延迟选择、随机选择、轮询或手动选择节点。结合规则匹配，用户可实现不同网站或应用使用不同节点，提高访问速度和网络稳定性，同时降低管理复杂度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何用 systemd 管理 V2Ray/ Sing-box 服务？</h5></div>
-    <div class="panel-body">
-        创建 systemd 单元文件，指定 ExecStart 指令并设置 Restart=on-failure 与合适的 User/Group。启用服务并使用 `systemctl enable` 与 `systemctl start` 管理，便于开机自启与日志集中收集。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 节点订阅失败如何处理？</h5></div>
-    <div class="panel-body">
-        首先确认订阅 URL 是否有效，并确保网络连接正常。可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组使用，确保稳定科学上网体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 节点延迟排序如何优化流量？</h5></div>
-    <div class="panel-body">
-        Matsuri 会定期测速节点延迟，并结合策略组自动选择低延迟节点。无需手动切换，确保网页、视频和游戏流量通过最优节点，提高访问速度和网络稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的自动切换功能如何配置？</h5></div>
-    <div class="panel-body">
-        Shadowrocket 支持根据策略组和节点延迟自动切换最优节点。用户可设置测速频率和延迟阈值，程序会定期测试节点并自动切换，以保证网络稳定性和速度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 如何通过命令行管理配置？</h5></div>
-    <div class="panel-body">
-        Clash 内置命令行接口，可用于启动、停止、切换配置或查看日志。通过命令行运行 `clash -f config.yaml` 可加载指定配置文件，适合服务器或无人值守场景。<hr />    </div>
+        PassWall2 会根据节点延迟和成功率自动调整策略组选择最优节点。测速结果直接影响程序选择出口，从而提高连接速度和稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Netch 全局代理与规则代理如何选择？</h5></div>
@@ -177,9 +153,34 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         全局代理会将所有流量通过节点转发，适合游戏或全局科学上网；规则代理只针对指定应用、IP 或端口走节点，可优化带宽使用和访问效率，根据需求灵活选择模式。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 节点订阅失败如何处理？</h5></div>
+    <div class="panel-body">
+        首先确认订阅 URL 是否有效，并确保网络连接正常。可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组使用，确保稳定科学上网体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的策略组支持哪些节点选择策略？</h5></div>
+    <div class="panel-body">
+        支持按延迟选择、随机选择、轮询或手动选择节点。结合规则匹配，用户可实现不同网站或应用使用不同节点，提高访问速度和网络稳定性，同时降低管理复杂度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 如何通过命令行管理配置？</h5></div>
+    <div class="panel-body">
+        Clash 内置命令行接口，可用于启动、停止、切换配置或查看日志。通过命令行运行 `clash -f config.yaml` 可加载指定配置文件，适合服务器或无人值守场景。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何用 systemd 管理 V2Ray/ Sing-box 服务？</h5></div>
+    <div class="panel-body">
+        创建 systemd 单元文件，指定 ExecStart 指令并设置 Restart=on-failure 与合适的 User/Group。启用服务并使用 `systemctl enable` 与 `systemctl start` 管理，便于开机自启与日志集中收集。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 的混淆插件如何增强隐蔽性？</h5></div>
     <div class="panel-body">
         混淆插件可模拟正常协议特征，如 HTTP 或 TLS 流量，使 SSR 流量难以被检测。合理选择混淆方式和协议，可提升在高封锁环境下的长期稳定性和安全性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 的自动切换功能如何配置？</h5></div>
+    <div class="panel-body">
+        Shadowrocket 支持根据策略组和节点延迟自动切换最优节点。用户可设置测速频率和延迟阈值，程序会定期测试节点并自动切换，以保证网络稳定性和速度。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Netch 如何在 Windows 上加速游戏？</h5></div>
@@ -187,9 +188,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         Netch 使用 TUN/TAP 模式将特定进程流量通过代理转发，常用于游戏加速。用户只需将游戏进程添加到列表，选择合适的代理节点，即可降低延迟并绕过地理限制。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 的节点测速结果如何影响分流？</h5></div>
+    <div class="panel-heading"><h5>Matsuri 节点延迟排序如何优化流量？</h5></div>
     <div class="panel-body">
-        PassWall2 会根据节点延迟和成功率自动调整策略组选择最优节点。测速结果直接影响程序选择出口，从而提高连接速度和稳定性。    </div>
+        Matsuri 会定期测速节点延迟，并结合策略组自动选择低延迟节点。无需手动切换，确保网页、视频和游戏流量通过最优节点，提高访问速度和网络稳定性。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -212,22 +213,43 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
 </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="panel panel-default">
+                        <div class="panel panel-default box right-ad-box">
+    <div class="panel-heading">
+        <h3 class="panel-title">特别推荐</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="text-center">
+                <a href="javascript:;" class="js_to" data-url="https://www.futizi.net/?code=" data-type="Luniuyun" data-code="svvkQf3y" target="_blank">
+                    <img src="/assets/website/img/G/luniuyun.webp" class="avatar" alt="绿牛云">
+                </a>
+                <dl>
+                    <dt><a href="javascript:;" class="js_to" data-url="https://www.futizi.net/?code=" data-type="Luniuyun" data-code="svvkQf3y" target="_blank">绿牛云</a></dt>
+                    <dd>
+                        <p>高速稳定的网络加速</p>
+                        <p>畅享全球内容，访问 ChatGPT、TikTok、Google 等热门网站。
+全平台支持 · 7×24 专业客服 · 采用军工级安全加密传输技术。</p>                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title">热门文章</h3>
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-5-3-free-subscribe-node.htm" title="V2ray Clash SSR - 5月3日21.1M/S|免费SSR节点/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点订阅节点分享">V2ray Clash SSR - 5月3日21.1M/S|免费SSR节点/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-15-clash-node.htm" title="V2ray Clash SSR - 5月15日19M/S|免费V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点订阅节点分享">V2ray Clash SSR - 5月15日19M/S|免费V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-26-free-node-subscribe-links.htm" title="V2ray Clash SSR - 4月26日20.9M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点订阅节点分享">V2ray Clash SSR - 4月26日20.9M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-9-shadowrocket-node.htm" title="V2ray Clash SSR - 5月9日21.5M/S|免费Trojan节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点订阅节点分享">V2ray Clash SSR - 5月9日21.5M/S|免费Trojan节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-16-free-shadowrocket-node.htm" title="V2ray Clash SSR - 5月16日20.3M/S|免费Singbox节点/SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点订阅节点分享">V2ray Clash SSR - 5月16日20.3M/S|免费Singbox节点/SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-2-free-shadowrocket-node.htm" title="V2ray Clash SSR - 5月2日23M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点订阅节点分享">V2ray Clash SSR - 5月2日23M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-23-shadowrocket-node.htm" title="V2ray Clash SSR - 4月23日19.7M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点订阅节点分享">V2ray Clash SSR - 4月23日19.7M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-11-free-v2ray.htm" title="V2ray Clash SSR - 5月11日21M/S|免费Shadowrocket节点/Trojan节点/Clash节点/SSR节点/V2ray节点/Singbox节点订阅节点分享">V2ray Clash SSR - 5月11日21M/S|免费Shadowrocket节点/Trojan节点/Clash节点/SSR节点/V2ray节点/Singbox节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-12-free-subscribe-node.htm" title="V2ray Clash SSR - 4月12日19.7M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点订阅节点分享">V2ray Clash SSR - 4月12日19.7M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-23-clash-node.htm" title="V2ray Clash SSR - 5月23日19.6M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点/SSR节点订阅节点分享">V2ray Clash SSR - 5月23日19.6M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点/SSR节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-9-shadowrocket-node.htm" title="V2ray Clash SSR - 5月9日21.5M/S|免费Trojan节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点订阅节点分享">V2ray Clash SSR - 5月9日21.5M/S|免费Trojan节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-4-free-v2ray.htm" title="V2ray Clash SSR - 6月4日19.7M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Trojan节点/Clash节点订阅节点分享">V2ray Clash SSR - 6月4日19.7M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Trojan节点/Clash节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-24-free-ssr-node.htm" title="V2ray Clash SSR - 5月24日22.1M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点订阅节点分享">V2ray Clash SSR - 5月24日22.1M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-14-free-ssr-subscribe.htm" title="V2ray Clash SSR - 5月14日19.1M/S|免费V2ray节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/Clash节点订阅节点分享">V2ray Clash SSR - 5月14日19.1M/S|免费V2ray节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/Clash节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-3-free-high-speed-nodes.htm" title="V2ray Clash SSR - 6月3日20.7M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/SSR节点订阅节点分享">V2ray Clash SSR - 6月3日20.7M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/SSR节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-8-free-node-subscribe-links.htm" title="V2ray Clash SSR - 5月8日22.9M/S|免费SSR节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点订阅节点分享">V2ray Clash SSR - 5月8日22.9M/S|免费SSR节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-6-free-shadowrocket-node.htm" title="V2ray Clash SSR - 5月6日18.9M/S|免费Singbox节点/Trojan节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点订阅节点分享">V2ray Clash SSR - 5月6日18.9M/S|免费Singbox节点/Trojan节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-19-node-share.htm" title="V2ray Clash SSR - 5月19日18.4M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/Clash节点/SSR节点订阅节点分享">V2ray Clash SSR - 5月19日18.4M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/Clash节点/SSR节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-26-free-v2ray.htm" title="V2ray Clash SSR - 5月26日20.6M/S|免费Clash节点/SSR节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点订阅节点分享">V2ray Clash SSR - 5月26日20.6M/S|免费Clash节点/SSR节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-7-shadowrocket-node.htm" title="V2ray Clash SSR - 5月7日21.9M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点订阅节点分享">V2ray Clash SSR - 5月7日21.9M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点订阅节点分享</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -239,10 +261,10 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
+                <h4><span class="badge" style="float: right;">5</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
             </li>
                     </ul>
     </div>
@@ -269,6 +291,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
+                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://www.futizi.net/?code=" data-type="Luniuyun" data-code="svvkQf3y" target="_blank">绿牛云</a></b> <p>高速稳定的网络加速</p>
+                        <p>畅享全球内容，访问 ChatGPT、TikTok、Google 等热门网站。
+全平台支持 · 7×24 专业客服 · 采用军工级安全加密传输技术。</p></div>
                                     V2ray Clash SSR 订阅教程网 版权所有
                 <br />
                 Powered by WordPress
